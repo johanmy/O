@@ -4,6 +4,6 @@ class MobileJoystick : MonoBehaviour, IPointerDownHandler
 {
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-        print(777);
+        print(7);
     }
 }

@@ -1,16 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 class GuideDelimitation : MonoBehaviour, IPointerDownHandler
 {
-    Transform guideOrientation;
+    GuideOrientation guideOrientation;
     void Start()
     {
-        guideOrientation = transform.GetChild(0);
+        guideOrientation = GetComponentInChildren<GuideOrientation>(false);
     }
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-        guideOrientation.position = Mouse.current.position.value;
-        guideOrientation.gameObject.SetActive(true);
+        guideOrientation.Localize();
     }
 }

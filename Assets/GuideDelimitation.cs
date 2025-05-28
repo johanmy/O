@@ -5,7 +5,7 @@ class GuideDelimitation : MonoBehaviour, IPointerDownHandler
     GuideOrientation guideOrientation;
     void Start()
     {
-        guideOrientation = GetComponentInChildren<GuideOrientation>(false);
+        guideOrientation = transform.GetChild(0).GetComponent<GuideOrientation>();
     }
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {

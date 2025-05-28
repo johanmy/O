@@ -11,5 +11,6 @@ class GuideDelimitation : MonoBehaviour, IPointerDownHandler
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
         guideOrientation.position = Mouse.current.position.value;
+        guideOrientation.gameObject.SetActive(true);
     }
 }
